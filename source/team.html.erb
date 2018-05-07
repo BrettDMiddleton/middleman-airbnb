@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>This template is built with <i class="fa fa-heart"></i> by:</h1>
+  <div class="row text-center" style=" background-color: rgb(244, 244, 244); padding: 100px">
+    <ul class="list-inline text-center">
+      <% data.users.each do |nickname| %>
+        <li>
+          <div class="row" style="margin: 20px">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{nickname.github_nickname}", class: "img-circle", style: "width: 160px"%>
+          </div>
+          <div class="row">
+            <%= "#{nickname.name}" %>
+          </div>
+          <div class="row">
+            <%= link_to "#{nickname.github_nickname}", "http://github.com/#{nickname.github_nickname}" %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
